@@ -1,0 +1,28 @@
+import type {ImageSourcePropType} from 'react-native';
+
+export const images = {
+  backgroundSplash: require('./backgroundSplash.png') as ImageSourcePropType,
+  backgroundOnboardingOne: require('./backgroundOnboardingOne.png') as ImageSourcePropType,
+  backgroundOnboardingTwo: require('./backgroundOnboardingTwo.png') as ImageSourcePropType,
+  backgroundHome: require('./backgroundHome.png') as ImageSourcePropType,
+  backgroundLibrary: require('./backgroundLibrary.png') as ImageSourcePropType,
+  backgroundMap: require('./backgroundMap.png') as ImageSourcePropType,
+  benjaminFranklinLightningRod: require('./benjaminFranklinLightningRod.png') as ImageSourcePropType,
+  bigBen: require('./bigBen.png') as ImageSourcePropType,
+  burjKhalifa: require('./burjKhalifa.png') as ImageSourcePropType,
+  catatumboRiver: require('./catatumboRiver.png') as ImageSourcePropType,
+  cnTower: require('./cnTower.png') as ImageSourcePropType,
+  congoBasinStormRegion: require('./congoBasinStormRegion.png') as ImageSourcePropType,
+  eiffelTower: require('./eiffelTower.png') as ImageSourcePropType,
+  lakeMaracaibo: require('./lakeMaracaibo.png') as ImageSourcePropType,
+  mountEverestStormZone: require('./mountEverestStormZone.png') as ImageSourcePropType,
+  oneWorldTradeCenter: require('./oneWorldTradeCenter.png') as ImageSourcePropType,
+  petronasTowers: require('./petronasTowers.png') as ImageSourcePropType,
+  shanghaiTower: require('./shanghaiTower.png') as ImageSourcePropType,
+  singaporeThunderZone: require('./singaporeThunderZone.png') as ImageSourcePropType,
+  stPetersBasilica: require('./stPetersBasilica.png') as ImageSourcePropType,
+  statueOfLiberty: require('./statueOfLiberty.png') as ImageSourcePropType,
+  tokyoSkytree: require('./tokyoSkytree.png') as ImageSourcePropType,
+  tornadoAlley: require('./tornadoAlley.png') as ImageSourcePropType,
+  washingtonMonument: require('./washingtonMonument.png') as ImageSourcePropType,
+};

@@ -1,4 +1,4 @@
-package com.strikestormexplorer
+package com.strikestorm.explorer
 
 import android.app.Application
 import com.facebook.react.PackageList

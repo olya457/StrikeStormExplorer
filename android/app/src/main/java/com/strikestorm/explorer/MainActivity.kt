@@ -1,4 +1,4 @@
-package com.strikestormexplorer
+package com.strikestorm.explorer
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
