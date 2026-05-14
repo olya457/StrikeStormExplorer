@@ -14,6 +14,30 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+def apply_xcode_26_4_fmt_workaround(installer)
+  installer.pods_project.targets.each do |target|
+    next unless target.name == 'fmt'
+
+    target.build_configurations.each do |config|
+      config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+    end
+  end
+
+  fmt_base_header = File.join(__dir__, 'Pods', 'fmt', 'include', 'fmt', 'base.h')
+  return unless File.exist?(fmt_base_header)
+
+  header = File.read(fmt_base_header)
+  patched_header = header.gsub(
+    /#  define FMT_USE_CONSTEVAL 1\b/,
+    '#  define FMT_USE_CONSTEVAL 0'
+  )
+
+  return if patched_header == header
+
+  File.chmod(File.stat(fmt_base_header).mode | 0o200, fmt_base_header)
+  File.write(fmt_base_header, patched_header)
+end
+
 target 'StrikeStormExplorer' do
   config = use_native_modules!
 
@@ -31,5 +55,7 @@ target 'StrikeStormExplorer' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    apply_xcode_26_4_fmt_workaround(installer)
   end
 end
