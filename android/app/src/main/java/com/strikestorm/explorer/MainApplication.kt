@@ -1,4 +1,4 @@
-package com.strikestorm.explorer
+package com.electriclandmarks
 
 import android.app.Application
 import com.facebook.react.PackageList
